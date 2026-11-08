@@ -37,6 +37,12 @@ Voraussetzungen: [Node.js](https://nodejs.org) (LTS) und [Git](https://git-scm.c
 
 ## Starten
 
+**Am einfachsten:** im Ordner `app` doppelt auf **`start.bat`** klicken. Beim ersten Mal werden
+die Pakete installiert und der Editor für den OpenAI-Schlüssel geöffnet. Danach öffnet sich der
+Browser automatisch. Zum Beenden das schwarze Fenster schließen.
+
+Alternativ in der Eingabeaufforderung im Ordner `app`:
+
 ```bash
 npm start
 ```

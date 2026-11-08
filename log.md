@@ -38,3 +38,7 @@ Letzte Einträge: `grep "^## \[" log.md | tail -5`
   Bestätigung „Ist das richtig: …“ per JA/NEIN in der Oberfläche, Vorlesen der Antworten.
 - Nutzt CLAUDE.md als Systemprompt; schreibt nur `index.md` und `wiki/**`, Rohquelle und Log macht die App.
 - CLAUDE.md um Abschnitt 12 ergänzt; README verweist auf die App; Linkprüfung ignoriert node_modules.
+
+## [2026-11-08] schema | Startdatei für Windows
+
+- `app/start.bat`: Doppelklick installiert beim ersten Mal die Pakete, legt `.env` an, öffnet Browser und startet die App.
