@@ -163,4 +163,6 @@ schema}. Letzte Einträge: `grep "^## \[" log.md | tail -5`.
 ## 11. Schreibweisen
 
 UiPath (RPA) · OmnIA (Insight Technology) · VoiceBots (Aristech) · Kreis Neustadt a.d.Aisch
-(Kürzel NEA) · Enzkreis. *(Schreibweise „VoiceBots“ vom Nutzer noch zu bestätigen.)*
+(Kürzel NEA) · Kreis Pinneberg · Enzkreis. Produktnamen sind laut Nutzer vorläufige
+Arbeitsnamen; „Aristech-Lizenzen“ werden der Produktseite VoiceBots zugeordnet. Die Daten sind
+derzeit teils Testdaten.

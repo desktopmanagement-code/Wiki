@@ -20,3 +20,14 @@ Letzte Einträge: `grep "^## \[" log.md | tail -5`
 
 - Antwort aus Kundenseite NEA + Wiedervorlagen: Termin mit Melany Ropiak sofort vereinbaren,
   Installation KW 48 (23.–27.11.2026), Ablauf 30.11.2026. Nicht als Analyse abgelegt (steht im Cockpit).
+
+## [2026-11-08] aufnahme | Notiz: Anruf Herr Schulz, Kreis Pinneberg
+
+- Rohquelle: `raw/2026-11-08-notiz-anruf-schulz-pinneberg.md` (wörtlich).
+- Neu: Kunde Kreis Pinneberg, Person Herr Schulz, Produkt VoiceBots (Aristech), Quellenseite.
+- Wiedervorlagen: Aufgabe „Angebot erstellen“ (ohne Frist) + Chance ergänzt.
+- Auffällig: E-Mail „abc@bca,de“ (Komma), vermutlich abc@bca.de – zur Bestätigung markiert.
+
+## [2026-11-08] schema | Produktnamen als Arbeitsnamen
+
+- Abschnitt 11 in CLAUDE.md: Produktnamen vorläufig, Testdaten-Hinweis.
