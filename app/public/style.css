@@ -1,0 +1,88 @@
+:root {
+  --hg: #f5f6f8;
+  --karte: #ffffff;
+  --text: #1c1f24;
+  --leise: #5f6670;
+  --rand: #dde1e6;
+  --akzent: #2f5fd0;
+  --gut: #1f7a3e;
+  --gut-hg: #e6f4ea;
+  --schlecht: #b3261e;
+  --warn-hg: #fff4e0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --hg: #15171a;
+    --karte: #1f2226;
+    --text: #e8eaed;
+    --leise: #9aa0a6;
+    --rand: #33373c;
+    --akzent: #7aa2ff;
+    --gut: #6fcf8a;
+    --gut-hg: #1d3325;
+    --schlecht: #f28b82;
+    --warn-hg: #3a2f1a;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  background: var(--hg);
+  color: var(--text);
+  line-height: 1.5;
+}
+header {
+  display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  padding: 12px 16px; border-bottom: 1px solid var(--rand); background: var(--karte);
+}
+header h1 { font-size: 1.2rem; margin: 0; }
+header nav a, .seite nav a { color: var(--akzent); margin-left: 12px; text-decoration: none; }
+main { max-width: 760px; margin: 0 auto; padding: 16px; display: grid; gap: 16px; }
+.karte { background: var(--karte); border: 1px solid var(--rand); border-radius: 12px; padding: 16px; }
+.karte h2 { margin: 0 0 4px; font-size: 1.1rem; }
+.hilfe { margin: 0 0 10px; color: var(--leise); font-size: 0.9rem; }
+textarea {
+  width: 100%; font: inherit; padding: 10px; border-radius: 8px; border: 1px solid var(--rand);
+  background: var(--hg); color: var(--text); resize: vertical;
+}
+.knoepfe { display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+button {
+  font: inherit; font-weight: 600; border-radius: 10px; border: 1px solid var(--rand);
+  padding: 12px 18px; cursor: pointer; background: var(--karte); color: var(--text);
+}
+button:disabled { opacity: 0.5; }
+.mikro { flex: 1; min-width: 140px; font-size: 1.05rem; }
+.mikro.aktiv { background: var(--schlecht); color: #fff; border-color: var(--schlecht); animation: puls 1.2s infinite; }
+@keyframes puls { 50% { opacity: 0.75; } }
+.senden { background: var(--akzent); color: #fff; border-color: var(--akzent); }
+.bestaetigung { margin-top: 14px; padding: 14px; border-radius: 10px; border: 2px solid var(--akzent); }
+.bestaetigung .frage { font-weight: 600; margin: 0 0 8px; }
+.bestaetigung details { color: var(--leise); font-size: 0.9rem; }
+.hinweise { color: var(--schlecht); font-size: 0.9rem; }
+.hinweise:empty { display: none; }
+.ja { flex: 1; background: var(--gut); color: #fff; border-color: var(--gut); font-size: 1.1rem; }
+.nein { flex: 1; background: var(--schlecht); color: #fff; border-color: var(--schlecht); font-size: 1.1rem; }
+.ergebnis { margin-top: 12px; padding: 10px 12px; border-radius: 8px; }
+.ergebnis.gut { background: var(--gut-hg); color: var(--gut); }
+.ergebnis.neutral { background: var(--hg); color: var(--leise); }
+.schalter { display: block; margin-top: 10px; color: var(--leise); font-size: 0.9rem; }
+.antwort { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--rand); }
+.antwort .gestellt { font-weight: 600; margin: 0 0 6px; }
+.abspielen { padding: 6px 12px; font-size: 0.9rem; }
+.markdown a { color: var(--akzent); }
+.markdown table { border-collapse: collapse; display: block; overflow-x: auto; max-width: 100%; }
+.markdown th, .markdown td { border: 1px solid var(--rand); padding: 4px 8px; text-align: left; vertical-align: top; }
+.markdown pre, .frontmatter { background: var(--hg); padding: 8px; border-radius: 6px; overflow-x: auto; font-size: 0.85rem; }
+.warnung { background: var(--warn-hg); padding: 10px 16px; border-bottom: 1px solid var(--rand); }
+.laden {
+  position: fixed; inset: 0; background: rgba(0, 0, 0, 0.35); display: flex;
+  align-items: center; justify-content: center; z-index: 10;
+}
+.laden span { background: var(--karte); padding: 14px 20px; border-radius: 10px; }
+.laden[hidden], [hidden] { display: none !important; }
+.seite { padding: 0 16px 32px; }
+.seite nav { padding: 12px 0; }
+.seite nav a:first-child { margin-left: 0; }
+.seite .pfad { color: var(--leise); font-size: 0.85rem; margin: 0; }
+.seite article { max-width: 860px; }

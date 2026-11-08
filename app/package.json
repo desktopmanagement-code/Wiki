@@ -1,0 +1,23 @@
+{
+  "name": "voice-second-brain",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Sprach-Oberfläche für das Second Brain (Wiki) – Wissen festhalten und Fragen stellen mit OpenAI",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test test/"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "marked": "^18.1.3",
+    "multer": "^2.5.0",
+    "openai": "^7.53.0",
+    "selfsigned": "^5.5.0"
+  }
+}

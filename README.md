@@ -7,7 +7,12 @@ VoiceBots). Ein KI-Agent pflegt das Wissen; du lieferst Informationen und stells
 - **Was steht an?** [wiki/wiedervorlagen.md](wiki/wiedervorlagen.md)
 - **Regeln für den Agenten:** [CLAUDE.md](CLAUDE.md) · **Verlauf:** [log.md](log.md)
 
-## So benutzt du es
+## Am bequemsten: per Sprache
+
+Die **Voice-App** im Ordner [app/](app/README.md) – sprechen statt tippen, Bestätigung per JA/NEIN,
+Antworten werden vorgelesen. Einrichtung: [app/README.md](app/README.md).
+
+## So benutzt du es (auch mit Claude Code)
 
 1. **Information festhalten:** „Notiz: …“ schreiben oder Text/E-Mail einfügen. Der Agent
    speichert das Original in `raw/` und aktualisiert Kunden-, Personen- und Lizenzseiten.

@@ -9,7 +9,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 LINK = re.compile(r"\[[^\]]*\]\(([^)\s]+)\)")
-SKIP_DIRS = {".git", "raw"}
+SKIP_DIRS = {".git", "raw", "node_modules"}
 
 broken = []
 inbound = {}

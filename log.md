@@ -31,3 +31,10 @@ Letzte Einträge: `grep "^## \[" log.md | tail -5`
 ## [2026-11-08] schema | Produktnamen als Arbeitsnamen
 
 - Abschnitt 11 in CLAUDE.md: Produktnamen vorläufig, Testdaten-Hinweis.
+
+## [2026-11-08] schema | Voice-App (app/) hinzugefügt
+
+- Web-App mit Spracheingabe (OpenAI), getrennten Bereichen „Wissen festhalten“ und „Frage stellen“,
+  Bestätigung „Ist das richtig: …“ per JA/NEIN in der Oberfläche, Vorlesen der Antworten.
+- Nutzt CLAUDE.md als Systemprompt; schreibt nur `index.md` und `wiki/**`, Rohquelle und Log macht die App.
+- CLAUDE.md um Abschnitt 12 ergänzt; README verweist auf die App; Linkprüfung ignoriert node_modules.

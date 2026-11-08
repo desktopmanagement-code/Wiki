@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Voice Second Brain</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <h1>Second Brain</h1>
+    <nav>
+      <a href="/seite?pfad=wiki/wiedervorlagen.md">Wiedervorlagen</a>
+      <a href="/seite?pfad=index.md">Index</a>
+    </nav>
+  </header>
+
+  <div id="warnung" class="warnung" hidden></div>
+
+  <main>
+    <!-- Wissen festhalten -->
+    <section class="karte" id="notiz">
+      <h2>Wissen festhalten</h2>
+      <p class="hilfe">Erzähl, was passiert ist – z. B. „Heute hat Herr Schulz vom Kreis Pinneberg angerufen …“</p>
+      <textarea id="notiz-text" rows="4" placeholder="Einsprechen oder tippen …"></textarea>
+      <div class="knoepfe">
+        <button class="mikro" data-ziel="notiz" type="button" aria-label="Aufnahme starten">🎙 Sprechen</button>
+        <button id="notiz-senden" class="senden" type="button">Auswerten</button>
+      </div>
+
+      <div id="bestaetigung" class="bestaetigung" hidden>
+        <p id="bestaetigung-frage" class="frage"></p>
+        <details>
+          <summary>Betroffene Seiten</summary>
+          <ul id="bestaetigung-dateien"></ul>
+        </details>
+        <ul id="bestaetigung-hinweise" class="hinweise"></ul>
+        <div class="knoepfe">
+          <button id="ja" class="ja" type="button">JA</button>
+          <button id="nein" class="nein" type="button">NEIN</button>
+        </div>
+      </div>
+      <div id="notiz-ergebnis" class="ergebnis" hidden></div>
+    </section>
+
+    <!-- Frage stellen -->
+    <section class="karte" id="frage">
+      <h2>Frage stellen</h2>
+      <p class="hilfe">Z. B. „Was muss ich diese Woche erledigen?“ oder „Was ist bei Pinneberg offen?“</p>
+      <textarea id="frage-text" rows="3" placeholder="Einsprechen oder tippen …"></textarea>
+      <div class="knoepfe">
+        <button class="mikro" data-ziel="frage" type="button" aria-label="Aufnahme starten">🎙 Sprechen</button>
+        <button id="frage-senden" class="senden" type="button">Fragen</button>
+      </div>
+      <label class="schalter"><input type="checkbox" id="vorlesen-an" checked> Antworten vorlesen</label>
+      <div id="antworten"></div>
+    </section>
+  </main>
+
+  <div id="laden" class="laden" hidden><span></span></div>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -45,6 +45,7 @@ wiki/              Aufbereitetes Wissen – gehört dem Agenten.
   quellen/         Je Quelle eine Zusammenfassungsseite (verweist auf raw/).
   analysen/        Gespeicherte gute Antworten auf Fragen (Vergleiche, Auswertungen).
 tools/             Kleine Hilfsskripte (z. B. Linkprüfung).
+app/               Voice-App (Node.js + OpenAI): Wissen einsprechen, Fragen stellen. Siehe Abschnitt 12.
 ```
 
 Ordner erst anlegen, wenn es echten Inhalt dafür gibt. **Keine leeren oder erfundenen Seiten.**
@@ -166,3 +167,15 @@ UiPath (RPA) · OmnIA (Insight Technology) · VoiceBots (Aristech) · Kreis Neus
 (Kürzel NEA) · Kreis Pinneberg · Enzkreis. Produktnamen sind laut Nutzer vorläufige
 Arbeitsnamen; „Aristech-Lizenzen“ werden der Produktseite VoiceBots zugeordnet. Die Daten sind
 derzeit teils Testdaten.
+
+## 12. Voice-App (`app/`)
+
+- Die Voice-App ist der normale Eingabeweg des Nutzers. Sie nutzt **diese Datei als Systemprompt**
+  für das OpenAI-Modell – Regeln hier wirken also auch dort. Änderungen an dieser Datei knapp und
+  eindeutig halten.
+- Ablauf in der App: Spracheingabe → Vorschlag „Ist das richtig: …“ → Nutzer klickt JA/NEIN in der
+  Oberfläche (keine Bestätigung per Sprache). Erst bei JA schreibt die App: Rohquelle
+  `raw/JJJJ-MM-TT-notiz-….md` (wörtlich), Wiki-Seiten, Log-Eintrag, Commit + Push.
+- Log-Einträge der App enden mit „(Voice-App)“. Bei der Pflege (Lint) Seiten, die über die App
+  entstanden sind, besonders auf Vollständigkeit und Gegenlinks prüfen.
+- Bedienung und Einrichtung: [app/README.md](app/README.md).
